@@ -1,0 +1,63 @@
+# custom.rules — supplementary Suricata rules for VPN/tunnel detection
+#
+# Loaded via "-S /rules/custom.rules" IN ADDITION to the ET Open ruleset.
+# Alerts appear in eve.json with classtype "policy-violation".
+#
+# SID range: 9000001–9000099  (local/custom range)
+#
+# Suricata 7.x docs: https://docs.suricata.io/en/latest/rules/intro.html
+#
+# NOTE: rules are validated on load; any parse error silently skips that rule.
+# Test syntax with:  suricata --dry-run -S custom.rules
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SECTION A — Generic tunnel heuristics
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Large, uniform-sized UDP bursts — WireGuard / DTLS tunnel pattern.
+alert udp any any -> any any (msg:"TUNNEL-TEST Uniform-size UDP burst (WireGuard-like)"; dsize:>1200; threshold: type both, track by_src, count 10, seconds 2; classtype:policy-violation; sid:9000001; rev:2;)
+
+# Noise Protocol handshake — two 32-byte length-prefixed ephemeral keys.
+# Wire pattern: 0x00 0x20 <32 bytes> … 0x00 0x20 <32 bytes>
+# Fires on detectable-raw-noise.yaml (Noise NN) and noise-xx-raw.yaml.
+alert tcp any any -> any any (msg:"TUNNEL-TEST Possible Noise Protocol handshake"; flow:established,to_server; content:"|00 20|"; depth:4; content:"|00 20|"; distance:30; within:38; classtype:policy-violation; sid:9000005; rev:2;)
+
+# HTTP CONNECT tunnelling (transparent proxy abuse).
+alert http any any -> any any (msg:"TUNNEL-TEST HTTP CONNECT method"; http.method; content:"CONNECT"; classtype:policy-violation; sid:9000004; rev:2;)
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SECTION B — Port-based rules
+# These fire reliably on any traffic to the known test ports.
+# detectable-raw-noise.yaml  → port 9001
+# detectable-no-sni-tls.yaml → port 9002
+# ═══════════════════════════════════════════════════════════════════════════════
+
+alert tcp any any -> any 9001 (msg:"TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)"; classtype:policy-violation; sid:9000010; rev:2;)
+
+alert udp any any -> any 9001 (msg:"TUNNEL-TEST UDP to raw-tunnel test port 9001"; classtype:policy-violation; sid:9000011; rev:1;)
+
+alert tcp any any -> any 9002 (msg:"TUNNEL-TEST TLS test port 9002 (no-SNI tunnel)"; classtype:policy-violation; sid:9000012; rev:2;)
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SECTION C — Traffic-shape heuristics (fixed-padding VPN)
+# Fires on detectable-raw-noise.yaml (padding.mode=fixed, fixed_size=1400)
+# and on noise-xx-raw.yaml (same padding).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Exactly 1400-byte TCP payload — 5+ occurrences within 3 seconds.
+alert tcp any any -> any any (msg:"TUNNEL-TEST Uniform 1400-byte TCP segments (fixed-padding VPN)"; flow:established; dsize:1400; threshold: type both, track by_src, count 5, seconds 3; classtype:policy-violation; sid:9000020; rev:1;)
+
+# Near-MTU TCP segments ≥ 1350 bytes — catches any fixed-padding variant.
+alert tcp any any -> any any (msg:"TUNNEL-TEST Uniform near-MTU TCP segments (possible fixed padding)"; flow:established; dsize:>1349; threshold: type both, track by_src, count 8, seconds 2; classtype:policy-violation; sid:9000021; rev:1;)
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SECTION D — TLS anomalies
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# TLS to port 9002 specifically — our "no SNI" detectable config.
+# More specific than 9000012 (triggers at TLS layer, not just TCP).
+alert tls any any -> any 9002 (msg:"TUNNEL-TEST TLS to no-SNI test port 9002"; flow:to_server,established; classtype:policy-violation; sid:9000031; rev:1;)

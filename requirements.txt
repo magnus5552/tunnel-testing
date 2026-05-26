@@ -1,0 +1,18 @@
+# Core
+pyyaml>=6.0
+dpkt>=1.9.8          # PCAP/PCAPng parsing (all link types, incl. Windows loopback)
+
+# HTTP traffic generation
+requests>=2.31
+PySocks>=1.7.1
+
+# PCAP parsing
+scapy>=2.5
+
+# ML / statistics
+scikit-learn>=1.4
+numpy>=1.26
+scipy>=1.12
+
+# Progress display (optional but nice)
+tqdm>=4.66

@@ -1,0 +1,26 @@
+{
+  "random_bytes": {
+    "connected": true,
+    "responded": false,
+    "silent": true
+  },
+  "partial_tls": {
+    "connected": true,
+    "responded": false,
+    "silent": true
+  },
+  "valid_tls_hello": {
+    "connected": true,
+    "responded": false,
+    "silent": true
+  },
+  "http_get": {
+    "connected": true,
+    "responded": false,
+    "rst": false
+  },
+  "empty_connect": {
+    "connected": true,
+    "server_speaks_first": false
+  }
+}

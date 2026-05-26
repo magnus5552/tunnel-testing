@@ -1,0 +1,87 @@
+{
+  "verdict": "PASS",
+  "failed_checks": [],
+  "skipped_checks": [
+    "M4_vpn_prob",
+    "M5_vpn_prob_seq",
+    "M6_kl_len",
+    "M7_kl_iat"
+  ],
+  "checks": {
+    "M1_ndpi": {
+      "result": "PASS",
+      "detail": {
+        "classified_as": null,
+        "confidence": null,
+        "is_known_vpn": null
+      }
+    },
+    "M2_suricata": {
+      "result": "PASS",
+      "detail": {
+        "alert_count": 0,
+        "categories": []
+      }
+    },
+    "M3_ja3": {
+      "result": "PASS",
+      "detail": {
+        "ja3_is_browser": null,
+        "browser_matches": [],
+        "unique_ja3_count": 0
+      }
+    },
+    "M4_vpn_prob": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "Not a valid PCAP file: D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-testing\\results\\debug-02\\capture.pcap"
+      }
+    },
+    "M5_vpn_prob_seq": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "Not a valid PCAP file: D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-testing\\results\\debug-02\\capture.pcap"
+      }
+    },
+    "M6_kl_len": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "Not a valid PCAP file: D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-testing\\results\\debug-02\\capture.pcap"
+      }
+    },
+    "M7_kl_iat": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "Not a valid PCAP file: D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-testing\\results\\debug-02\\capture.pcap"
+      }
+    },
+    "M8_probe": {
+      "result": "PASS",
+      "detail": {
+        "distinguishable_ratio": 0.0,
+        "flags": 0
+      }
+    }
+  },
+  "config": {
+    "dsl_config": "D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-gen\\examples\\tls-token.yaml",
+    "scenario": "web",
+    "duration_s": 15
+  },
+  "raw": {
+    "pcap_path": "D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-testing\\results\\debug-02\\capture.pcap",
+    "m4_m7_flow": {
+      "error": "Not a valid PCAP file: D:\\programs\\\u0434\u0438\u043f\u043b\u043e\u043c\\tunnel-testing\\results\\debug-02\\capture.pcap"
+    },
+    "m8_probe": {
+      "distinguishable_ratio": 0.0,
+      "distinguishable_flags": 0,
+      "check_random_bytes_responded": false,
+      "check_http_looks_http": false,
+      "check_server_speaks_first": false,
+      "ttfb_mean_ms": null,
+      "ttfb_values_ms": [],
+      "probe_count": 5
+    }
+  }
+}

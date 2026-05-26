@@ -1,0 +1,57 @@
+{
+  "_config_name": "plain-HTTPS (reference)",
+  "verdict": "REFERENCE",
+  "checks": {
+    "M1_ndpi": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "not applicable for direct HTTPS"
+      }
+    },
+    "M2_suricata": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "not applicable for direct HTTPS"
+      }
+    },
+    "M3_ja3": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "not applicable for direct HTTPS"
+      }
+    },
+    "M4_vpn_prob": {
+      "result": "PASS",
+      "detail": {
+        "vpn_prob": 0.5431
+      }
+    },
+    "M5_vpn_prob_seq": {
+      "result": "FAIL",
+      "detail": {
+        "vpn_prob_seq": 0.884
+      }
+    },
+    "M6_kl_len": {
+      "result": "FAIL",
+      "detail": {
+        "kl_len": 0.8497
+      }
+    },
+    "M7_kl_iat": {
+      "result": "FAIL",
+      "detail": {
+        "kl_iat": 0.4138
+      }
+    },
+    "M8_probe": {
+      "result": "SKIP",
+      "detail": {
+        "reason": "not applicable for direct HTTPS"
+      }
+    }
+  },
+  "config": {
+    "dsl_config": "direct HTTPS (no tunnel)"
+  }
+}

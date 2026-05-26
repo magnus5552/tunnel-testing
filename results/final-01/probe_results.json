@@ -1,0 +1,33 @@
+{
+  "random_bytes": {
+    "connected": true,
+    "responded": true,
+    "ttfb_ms": 94.0,
+    "response_bytes": 0,
+    "response_hex": ""
+  },
+  "partial_tls": {
+    "connected": true,
+    "responded": false,
+    "silent": true
+  },
+  "valid_tls_hello": {
+    "connected": true,
+    "responded": true,
+    "ttfb_ms": 0.0,
+    "response_bytes": 61,
+    "looks_like_tls": true
+  },
+  "http_get": {
+    "connected": true,
+    "responded": true,
+    "ttfb_ms": 94.0,
+    "response_bytes": 0,
+    "looks_like_http": false,
+    "status_line": ""
+  },
+  "empty_connect": {
+    "connected": true,
+    "server_speaks_first": false
+  }
+}

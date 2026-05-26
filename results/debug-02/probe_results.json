@@ -1,0 +1,17 @@
+{
+  "random_bytes": {
+    "connected": false
+  },
+  "partial_tls": {
+    "connected": false
+  },
+  "valid_tls_hello": {
+    "connected": false
+  },
+  "http_get": {
+    "connected": false
+  },
+  "empty_connect": {
+    "connected": false
+  }
+}

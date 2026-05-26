@@ -1,0 +1,22 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2026-05-26-06-32-19
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1779777104.932375	CqI8Wq2xQXtjCpm94h	127.0.0.1	41229	127.0.0.1	9100	tcp	-	5.014024	16	0	SF	T	T	0	ShADafF	5	284	4	216	-	6
+1779777104.895385	CaYe2J6PuaOuBa66h	127.0.0.1	41228	127.0.0.1	9080	tcp	socks	5.051195	21	12	RSTO	T	T	0	ShADadFR	7	381	6	332	-	6
+1779777110.249734	CkpucMgVHJ41nfJPk	127.0.0.1	41232	127.0.0.1	9100	tcp	-	5.014291	16	0	SF	T	T	0	ShADafF	5	284	4	216	-	6
+1779777110.225733	C4JPXTdfXLr5JLXY	127.0.0.1	41231	127.0.0.1	9080	tcp	socks	5.038486	21	12	RSTO	T	T	0	ShADadFR	7	381	6	332	-	6
+1779777115.700758	CZ0RjiYZjGWP6gAk	127.0.0.1	4541	127.0.0.1	9100	tcp	-	5.013271	16	0	SF	T	T	0	ShADafF	5	284	4	216	-	6
+1779777115.561152	C0KdCF4l7w49Em8lg	127.0.0.1	4540	127.0.0.1	9080	tcp	socks	5.153038	21	12	RSTO	T	T	0	ShADadFR	7	381	6	332	-	6
+1779777121.011205	C4VmSg2FvpMxfxMZol	127.0.0.1	4544	127.0.0.1	9100	tcp	-	5.004126	16	0	SF	T	T	0	ShADafF	5	284	4	216	-	6
+1779777120.890489	CresqLIBN8PxciY3j	127.0.0.1	4543	127.0.0.1	9080	tcp	socks	5.125068	21	12	RSTO	T	T	0	ShADadFR	7	381	6	332	-	6
+1779777126.540002	Cgqkwr2pNTACPh5t9	127.0.0.1	4547	127.0.0.1	9100	tcp	-	2.518896	32	0	SF	T	T	0	ShADaFf	5	300	4	216	-	6
+1779777134.102435	CE0hK32aPzFsq82lP4	127.0.0.1	4552	127.0.0.1	9100	tcp	-	0.000073	0	0	S1	T	T	0	ShA	2	112	1	60	-	6
+1779777134.085053	CoXhFX2Jd8Sv2LVAWh	127.0.0.1	4551	127.0.0.1	9100	tcp	http	0.017055	54	60	SF	T	T	0	ShADadfF	6	374	5	328	-	6
+1779777131.582887	CIOVrM2QgU9rGjNlu8	127.0.0.1	4550	127.0.0.1	9100	tcp	ssl	2.501647	89	0	SF	T	T	0	ShADaFf	5	357	4	216	-	6
+1779777129.059202	CDxQ3ysx08Cp0g5Gg	127.0.0.1	4548	127.0.0.1	9100	tcp	-	2.523293	5	0	SF	T	T	0	ShADaFf	5	273	4	216	-	6
+#close	2026-05-26-06-32-19

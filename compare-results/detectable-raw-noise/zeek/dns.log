@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2026-05-26-06-31-04
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected	opcode	opcode_name
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool	count	string
+1779777033.480304	CZ4myg1xhwt0jz4pG8	26.56.25.32	137	26.255.255.255	137	udp	37107	-	LAPTOP-T8JB3MPS	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779777034.231179	CZ4myg1xhwt0jz4pG8	26.56.25.32	137	26.255.255.255	137	udp	37107	-	LAPTOP-T8JB3MPS	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779777034.983869	CZ4myg1xhwt0jz4pG8	26.56.25.32	137	26.255.255.255	137	udp	37107	-	LAPTOP-T8JB3MPS	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+#close	2026-05-26-06-31-04

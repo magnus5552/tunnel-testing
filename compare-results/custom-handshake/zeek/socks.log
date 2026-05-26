@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	socks
+#open	2026-05-26-06-32-19
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	user	password	status	request.host	request.name	request_p	bound.host	bound.name	bound_p
+#types	time	string	addr	port	addr	port	count	string	string	string	addr	string	port	addr	string	port
+1779777104.909448	CaYe2J6PuaOuBa66h	127.0.0.1	41228	127.0.0.1	9080	5	-	-	Host unreachable	-	example.com	80	0.0.0.0	-	0
+1779777110.239903	C4JPXTdfXLr5JLXY	127.0.0.1	41231	127.0.0.1	9080	5	-	-	Host unreachable	-	example.org	80	0.0.0.0	-	0
+1779777115.574484	C0KdCF4l7w49Em8lg	127.0.0.1	4540	127.0.0.1	9080	5	-	-	Host unreachable	-	httpbin.org	80	0.0.0.0	-	0
+1779777120.903869	CresqLIBN8PxciY3j	127.0.0.1	4543	127.0.0.1	9080	5	-	-	Host unreachable	-	httpbin.org	80	0.0.0.0	-	0
+#close	2026-05-26-06-32-19
