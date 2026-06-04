@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 
 SURICATA_IMAGE = "jasonish/suricata:latest"
 ET_RULES_URL = (
-    "https://rules.emergingthreats.net/open/suricata-7.0/rules/emerging-all.rules"
+    "https://rules.emergingthreats.net/open/suricata-7.0.3/emerging-all.rules"
 )
 
 
@@ -41,7 +41,7 @@ def analyze(pcap_path: Path, output_dir: Path, rules_dir: Path) -> dict:
 
     rules_dir.mkdir(parents=True, exist_ok=True)
     rules_file = rules_dir / "emerging-all.rules"
-    if not rules_file.exists():
+    if not rules_file.exists() or _rules_is_stub(rules_file):
         _download_rules(rules_file)
 
     suricata_out = output_dir / "suricata"
@@ -175,6 +175,15 @@ def _parse_eve(output_dir: Path) -> dict:
         "tls_sni":       sorted({t.get("sni")     for t in tls if t.get("sni")}),
         "categories":    sorted({a["category"] for a in alerts if a["category"]}),
     }
+
+
+def _rules_is_stub(path: Path) -> bool:
+    """Return True if the rules file is just the download-failed placeholder."""
+    try:
+        first_line = path.read_text(encoding="utf-8", errors="replace").splitlines()[0]
+        return first_line.startswith("# download failed")
+    except Exception:
+        return True
 
 
 def _download_rules(dest: Path) -> None:

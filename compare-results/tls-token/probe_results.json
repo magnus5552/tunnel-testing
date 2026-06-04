@@ -2,7 +2,7 @@
   "random_bytes": {
     "connected": true,
     "responded": true,
-    "ttfb_ms": 110.0,
+    "ttfb_ms": 78.0,
     "response_bytes": 0,
     "response_hex": ""
   },
@@ -21,7 +21,7 @@
   "http_get": {
     "connected": true,
     "responded": true,
-    "ttfb_ms": 94.0,
+    "ttfb_ms": 79.0,
     "response_bytes": 0,
     "looks_like_http": false,
     "status_line": ""

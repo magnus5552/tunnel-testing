@@ -1,0 +1,79 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2026-05-26-11-40-49
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected	opcode	opcode_name
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool	count	string
+1779795599.364567	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.367279	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.370964	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.373346	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.675599	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.677963	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.371099	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.372876	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.374143	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.387002	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.683927	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.685686	Ckzcd93hhSq7DAIbgd	26.56.25.32	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.365250	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.367680	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.371320	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.373708	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.676131	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.678260	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.371778	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.373154	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.374349	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.387394	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.684340	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.685900	CyqjgL13QOBKu6hPni	10.8.1.3	5353	224.0.0.251	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.365980	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.368225	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.371845	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.374153	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.676700	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.678764	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.372159	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.373442	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.374627	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.387848	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.684813	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.686260	C5MPMX34BphtxKv7A1	fe80::d3e5:fd2a:f62c:a48b	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.366583	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.368555	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.372361	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.374503	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.677198	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.679181	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.372466	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.373696	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.374821	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.388225	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.685206	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795600.686610	CwUaTF2mldvKSO6gf1	fd58:baa6:dead::1	5353	ff02::fb	5353	udp	0	-	desktop-rhkm7oi.local	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.369869	CmVdyj2BEQgaaHaFv5	fd58:baa6:dead::1	64308	ff02::1:3	5355	udp	62645	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789356	CmVdyj2BEQgaaHaFv5	fd58:baa6:dead::1	64308	ff02::1:3	5355	udp	62645	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.370011	Cisqg43aCsAMMpexwl	10.8.1.3	64308	224.0.0.252	5355	udp	62645	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789439	Cisqg43aCsAMMpexwl	10.8.1.3	64308	224.0.0.252	5355	udp	62645	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.370615	C82fsi2lFPVZyw6iF3	fd58:baa6:dead::1	59051	ff02::1:3	5355	udp	57729	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789356	C82fsi2lFPVZyw6iF3	fd58:baa6:dead::1	59051	ff02::1:3	5355	udp	57729	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.370724	CrJ6SN1cpLIs7d2dec	10.8.1.3	59051	224.0.0.252	5355	udp	57729	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789438	CrJ6SN1cpLIs7d2dec	10.8.1.3	59051	224.0.0.252	5355	udp	57729	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.376099	C4AW9k39Ud5TN4Sv8	fe80::d3e5:fd2a:f62c:a48b	56361	ff02::1:3	5355	udp	44015	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789373	C4AW9k39Ud5TN4Sv8	fe80::d3e5:fd2a:f62c:a48b	56361	ff02::1:3	5355	udp	44015	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.376282	CJKpBq1nVuhAHT5BN9	26.56.25.32	56361	224.0.0.252	5355	udp	44015	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789464	CJKpBq1nVuhAHT5BN9	26.56.25.32	56361	224.0.0.252	5355	udp	44015	-	desktop-rhkm7oi	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.377030	CnnPgr4yEURjO1eDjf	fe80::d3e5:fd2a:f62c:a48b	62641	ff02::1:3	5355	udp	40622	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789370	CnnPgr4yEURjO1eDjf	fe80::d3e5:fd2a:f62c:a48b	62641	ff02::1:3	5355	udp	40622	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.377144	CY0U6u3P60FgvPzl6c	26.56.25.32	62641	224.0.0.252	5355	udp	40622	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795599.789462	CY0U6u3P60FgvPzl6c	26.56.25.32	62641	224.0.0.252	5355	udp	40622	-	desktop-rhkm7oi	1	C_INTERNET	28	AAAA	-	-	F	F	F	F	0	-	-	F	0	query
+1779795598.713349	C74QiP2VPXwhNzVp22	26.56.25.32	137	26.255.255.255	137	udp	56614	-	LAPTOP-T8JB3MPS	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779795599.789653	C74QiP2VPXwhNzVp22	26.56.25.32	137	26.255.255.255	137	udp	56616	-	DESKTOP-RHKM7OI	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779795600.543132	C74QiP2VPXwhNzVp22	26.56.25.32	137	26.255.255.255	137	udp	56616	-	DESKTOP-RHKM7OI	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779795601.304739	C74QiP2VPXwhNzVp22	26.56.25.32	137	26.255.255.255	137	udp	56616	-	DESKTOP-RHKM7OI	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779795599.473269	C74QiP2VPXwhNzVp22	26.56.25.32	137	26.255.255.255	137	udp	56614	-	LAPTOP-T8JB3MPS	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+1779795600.228260	C74QiP2VPXwhNzVp22	26.56.25.32	137	26.255.255.255	137	udp	56614	-	LAPTOP-T8JB3MPS	1	C_INTERNET	32	NIMLOC	-	-	F	F	T	F	1	-	-	F	0	netbios-query
+#close	2026-05-26-11-40-49

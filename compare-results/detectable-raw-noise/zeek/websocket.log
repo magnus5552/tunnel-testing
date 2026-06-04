@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	websocket
+#open	2026-05-26-11-38-08
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	host	uri	user_agent	subprotocol	client_protocols	server_extensions	client_extensions
+#types	time	string	addr	port	addr	port	string	string	string	string	vector[string]	vector[string]	vector[string]
+1779795399.706113	CunD6w49rqGoWtyKB1	127.0.0.1	61935	127.0.0.1	39744	127.0.0.1:39744	/490f9011-9143-4c51-a737-92cc25868ea9	-	-	-	-	-
+#close	2026-05-26-11-38-08

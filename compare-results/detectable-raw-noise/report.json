@@ -19,7 +19,7 @@
     "M2_suricata": {
       "result": "FAIL",
       "detail": {
-        "alert_count": 36,
+        "alert_count": 30,
         "categories": [
           "Potential Corporate Privacy Violation"
         ]
@@ -31,14 +31,14 @@
         "ja3_is_browser": false,
         "browser_matches": [],
         "unique_ja3_count": 0,
-        "high_entropy_streams": 46,
-        "payload_byte_entropy": 7.843
+        "high_entropy_streams": 38,
+        "payload_byte_entropy": 7.819
       }
     },
     "M4_vpn_prob": {
       "result": "PASS",
       "detail": {
-        "vpn_prob": 0.126
+        "vpn_prob": 0.39
       }
     },
     "M5_vpn_prob_seq": {
@@ -50,13 +50,13 @@
     "M6_kl_len": {
       "result": "FAIL",
       "detail": {
-        "kl_len": 0.3937
+        "kl_len": 1.0663
       }
     },
     "M7_kl_iat": {
       "result": "FAIL",
       "detail": {
-        "kl_iat": 0.5718
+        "kl_iat": 0.8141
       }
     },
     "M8_probe": {
@@ -78,14 +78,14 @@
       "classified_as": "SOCKS",
       "is_known_vpn": false,
       "is_acceptable": true,
-      "flow_count": 27,
-      "known_flow_count": 27,
+      "flow_count": 26,
+      "known_flow_count": 26,
       "protocol_distribution": {
-        "SOCKS": 23,
-        "HTTP": 1,
-        "NetBIOS": 1,
-        "TLS": 1,
-        "SSDP": 1
+        "SOCKS": 19,
+        "NetBIOS.SMBv1": 1,
+        "HTTP": 3,
+        "MDNS": 2,
+        "TLS": 1
       },
       "ja3_hashes": [
         "c36487a186a3815cca7e6997088b9efa"
@@ -93,6 +93,7 @@
       "ja4_hashes": [],
       "sni_set": [
         "127.0.0.1",
+        "4643a458-881b-4fe5-a089-b263f2cfc6c4.local",
         "laptop-t8jb3mps"
       ],
       "tls_versions": [
@@ -100,7 +101,7 @@
       ]
     },
     "m2_suricata": {
-      "alert_count": 36,
+      "alert_count": 30,
       "alerts": [
         {
           "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
@@ -151,30 +152,6 @@
           "dport": 9001
         },
         {
-          "signature": "TUNNEL-TEST Uniform near-MTU TCP segments (possible fixed padding)",
-          "category": "Potential Corporate Privacy Violation",
-          "severity": 1,
-          "src": "127.0.0.1",
-          "dst": "127.0.0.1",
-          "dport": 57455
-        },
-        {
-          "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
-          "category": "Potential Corporate Privacy Violation",
-          "severity": 1,
-          "src": "127.0.0.1",
-          "dst": "127.0.0.1",
-          "dport": 9001
-        },
-        {
-          "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
-          "category": "Potential Corporate Privacy Violation",
-          "severity": 1,
-          "src": "127.0.0.1",
-          "dst": "127.0.0.1",
-          "dport": 9001
-        },
-        {
           "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
           "category": "Potential Corporate Privacy Violation",
           "severity": 1,
@@ -188,7 +165,7 @@
           "severity": 1,
           "src": "127.0.0.1",
           "dst": "127.0.0.1",
-          "dport": 57465
+          "dport": 9001
         },
         {
           "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
@@ -197,6 +174,30 @@
           "src": "127.0.0.1",
           "dst": "127.0.0.1",
           "dport": 9001
+        },
+        {
+          "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
+          "category": "Potential Corporate Privacy Violation",
+          "severity": 1,
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "dport": 9001
+        },
+        {
+          "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
+          "category": "Potential Corporate Privacy Violation",
+          "severity": 1,
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "dport": 9001
+        },
+        {
+          "signature": "TUNNEL-TEST Uniform near-MTU TCP segments (possible fixed padding)",
+          "category": "Potential Corporate Privacy Violation",
+          "severity": 1,
+          "src": "127.0.0.1",
+          "dst": "127.0.0.1",
+          "dport": 61944
         },
         {
           "signature": "TUNNEL-TEST Raw-tunnel test port 9001 (raw Noise NN)",
@@ -263,7 +264,7 @@
           "dport": 9001
         }
       ],
-      "flow_count": 53,
+      "flow_count": 48,
       "tls_count": 0,
       "tls_versions": [],
       "tls_sni": [],
@@ -282,26 +283,26 @@
       "browser_matches": [],
       "ja3_is_browser": false,
       "unique_ja3_count": 0,
-      "conn_count": 53,
-      "unknown_service_conns": 23,
-      "payload_byte_entropy": 7.843,
-      "high_entropy_streams": 46,
-      "entropy_sample_size": 65199
+      "conn_count": 48,
+      "unknown_service_conns": 19,
+      "payload_byte_entropy": 7.819,
+      "high_entropy_streams": 38,
+      "entropy_sample_size": 56252
     },
     "m4_m7_flow": {
-      "vpn_prob": 0.126,
+      "vpn_prob": 0.39,
       "vpn_prob_seq": 0.0114,
-      "kl_len": 0.3937,
-      "kl_iat": 0.5718,
-      "total_packets": 1122,
-      "total_flows": 53,
-      "total_bytes": 238737,
-      "duration_s": 35.69,
-      "pkt_len_mean": 394.0,
-      "pkt_len_std": 599.5,
-      "iat_mean_ms": 31.84,
-      "small_pkt_pct": 63.6,
-      "large_pkt_pct": 24.6,
+      "kl_len": 1.0663,
+      "kl_iat": 0.8141,
+      "total_packets": 3813,
+      "total_flows": 47,
+      "total_bytes": 2125257,
+      "duration_s": 35.33,
+      "pkt_len_mean": 1062.5,
+      "pkt_len_std": 4325.6,
+      "iat_mean_ms": 9.27,
+      "small_pkt_pct": 13.5,
+      "large_pkt_pct": 5.7,
       "model_used": "heuristic"
     },
     "m8_probe": {

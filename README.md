@@ -334,7 +334,8 @@ Suricata — IDS/IPS с поддержкой правил в формате Snor
 правилами из `rules/custom.rules`.
 
 **Правила ET Open** скачиваются автоматически при первом запуске (~50 МБ)
-и кешируются в `rules/emerging-all.rules`.
+и кешируются в `rules/emerging-all.rules`. Источник:
+`https://rules.emergingthreats.net/open/suricata-7.0.3/rules/emerging-all.rules`
 
 **Кастомные правила** (`rules/custom.rules`) проверяют туннельно-специфичные
 паттерны, которые не покрывает ET Open:

@@ -3,8 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	tunnel
-#open	2026-05-26-06-34-27
+#open	2026-05-26-11-39-27
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	tunnel_type	action
 #types	time	string	addr	port	addr	port	enum	enum
-1779777237.571279	-	127.0.0.1	0	127.0.0.1	9080	Tunnel::SOCKS	Tunnel::DISCOVER
-#close	2026-05-26-06-34-27
+1779795509.048047	-	127.0.0.1	0	127.0.0.1	9080	Tunnel::SOCKS	Tunnel::DISCOVER
+#close	2026-05-26-11-39-27
