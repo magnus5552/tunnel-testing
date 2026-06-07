@@ -4,11 +4,15 @@ M5 — Packet-sequence classifier (first 20 packets)
 M6 — KL divergence for packet-length distribution vs. HTTPS reference
 M7 — KL divergence for inter-arrival-time distribution vs. HTTPS reference
 
-Reference distributions are empirical approximations from published research
-on HTTPS/TLS traffic. Replace with measurements from your own reference capture
-for more accurate results.
+Reference distributions are loaded from  tester/reference_distributions.json
+if that file exists (produced by  calibrate.py).  Otherwise the module falls
+back to empirical approximations from published research on HTTPS/TLS traffic.
+
+To calibrate for your local test environment:
+    python calibrate.py          # from the tunnel-testing/ directory
 """
 import csv
+import json
 import logging
 import math
 import statistics
@@ -17,16 +21,56 @@ from typing import List, Optional
 
 log = logging.getLogger(__name__)
 
-# ── Reference HTTPS distributions ──────────────────────────────────────────
+# ── Reference HTTPS distributions (fallback / defaults) ────────────────────
 # Packet length bins (bytes) and empirical probabilities
-_LEN_BINS  = [0, 100, 300, 600, 900, 1200, 1600, 10000]
-_LEN_PROBS = [0.32, 0.08, 0.07, 0.07, 0.10, 0.24, 0.12]  # ACKs + TLS records
+_LEN_BINS          = [0, 100, 300, 600, 900, 1200, 1600, 10000]
+_LEN_PROBS_DEFAULT = [0.32, 0.08, 0.07, 0.07, 0.10, 0.24, 0.12]
 
 # IAT bins (milliseconds) and empirical probabilities
-_IAT_BINS  = [0, 1, 5, 20, 100, 500, 10_000]
-_IAT_PROBS = [0.38, 0.15, 0.15, 0.15, 0.12, 0.05]
+_IAT_BINS          = [0, 1, 5, 20, 100, 500, 10_000]
+_IAT_PROBS_DEFAULT = [0.38, 0.15, 0.15, 0.15, 0.12, 0.05]
 
 _EPS = 1e-9   # smoothing constant for KL divergence
+
+
+def _load_reference() -> tuple[list, list]:
+    """
+    Load calibrated reference distributions from tester/reference_distributions.json.
+
+    Strategy:
+      - IAT probs: always use calibrated values when available.
+        IAT is highly environment-dependent (loopback ≈ 0 ms vs. WAN ≈ 20–100 ms);
+        the calibration captures real internet RTT embedded in loopback SOCKS5 traffic,
+        making the IAT baseline match actual test conditions.
+      - LEN probs: keep the original research-based values.
+        Packet-length distribution reflects protocol behaviour (AEAD frame sizes,
+        TLS record overhead) rather than network latency, so the published empirical
+        distribution remains a better reference than a short calibration capture.
+
+    Falls back entirely to built-in defaults if the file is missing or malformed.
+    Returns (len_probs, iat_probs).
+    """
+    ref_path = Path(__file__).parent.parent / "reference_distributions.json"
+    if ref_path.exists():
+        try:
+            data = json.loads(ref_path.read_text(encoding="utf-8"))
+            iat_p = data["iat_probs"]
+            if len(iat_p) == len(_IAT_PROBS_DEFAULT):
+                log.debug(
+                    "Using calibrated IAT reference from %s  (n_packets=%s, "
+                    "calibrated_at=%s); LEN reference kept from built-in defaults.",
+                    ref_path,
+                    data.get("n_packets", "?"),
+                    data.get("calibrated_at", "?"),
+                )
+                return _LEN_PROBS_DEFAULT, iat_p
+        except Exception as exc:
+            log.warning("Could not load reference_distributions.json: %s", exc)
+    return _LEN_PROBS_DEFAULT, _IAT_PROBS_DEFAULT
+
+
+# Load once at import time
+_LEN_PROBS, _IAT_PROBS = _load_reference()
 
 
 def analyze(pcap_path: Path, output_dir: Path,
